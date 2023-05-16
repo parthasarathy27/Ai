@@ -1,0 +1,82 @@
+AIM:
+
+To write a program to implement N Queen problem of the given set.
+
+ALGORITHM:
+
+STEP 1: Represent the board positions as 8*8 vector,i.e., (1,2,3,4,5,6,7,8).Store the set of 
+
+queens in the list 'Q'.
+
+STEP 2: Calculate the permutation of the above eight numbers stored in set P.
+
+STEP 3: Let the position where the first queen to be placed be (1,Y), for second be (2,Y1) 
+
+and so on and store the positions in Q.
+
+STEP 4: Check for the safety of the queens through the predicate, 'noattack 0’.
+
+STEP 5: Calculate YI-Y and Y-Y1. If both are not equal to Xdist, which is the X- distance 
+
+between the first queen and others, then go to Step 6: Else go to Step 7.
+
+STEP 6: Increment Xdist by 1.
+
+STEP 7: Repeat above for the rest of the queens, until the end of the list is reached.
+
+STEP 8: Print Q as answer. 
+
+STEP 9: Exit.
+
+PROGRAM:
+
+use_module(library(lists)).
+
+n_queen(N, Solution) :-
+
+length(Solution, N),
+
+queen(Solution, N).
+
+up2N(N,N,[N]) :-!.
+
+up2N(K,N,[K|Tail]) :- K < N, K1 is K+1, up2N(K1, N, Tail).
+
+queen([],_).
+
+queen([Q|Qlist],N) :-
+
+queen(Qlist, N),
+
+up2N(1,N,Candidate_positions_for_queenQ),
+
+member(Q, Candidate_positions_for_queenQ),
+
+check_solution(Q,Qlist, 1).
+
+check_solution(_,[], _).
+
+check_solution(Q,[Q1|Qlist],Xdist) :-
+
+Q =\= Q1,
+
+Test is abs(Q1-Q),
+
+Test =\= Xdist,
+
+Xdist1 is Xdist + 1,
+
+
+
+check_solution(Q,Qlist,Xdist1).
+
+OUTPUT:
+
+?- n_queen(4,Solution).
+
+Solution = [3, 1, 4, 2] 
+
+RESULT:
+
+Thus the program to implement N queen problem using prolog was executed and the 
+output was verified successfully.
