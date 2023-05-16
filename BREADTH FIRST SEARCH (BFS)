@@ -1,0 +1,67 @@
+AIM:
+
+To write a program to solve any program using breadth first search.
+
+ALGORITHM:
+
+STEP 1: SET STATUS = 1 (ready state) for each node in G
+
+STEP 2: Enqueue the starting node A and set its STATUS = 2 (waiting state)
+
+STEP 3: Repeat Steps 4 and 5 until QUEUE is empty
+
+STEP 4: Dequeue a node N. Process it and set its STATUS = 3 (processed state).
+
+STEP 5: Enqueue all the neighbours of N that are in the ready state (whose STATUS = 1) 
+
+and set their STATUS = 2
+
+(waiting state)
+
+[END OF LOOP]
+
+STEP 6: EXIT
+
+PROGRAM:
+
+% breadth_first_search(+Start, +Goal, -Path)
+
+% Breadth-first search algorithm. Finds a path from Start to Goal.
+
+breadth_first_search(Start, Goal, Path) :-
+
+ bfs([[Start]], Goal, RevPath),
+
+ reverse(RevPath, Path).
+
+% bfs(+Paths, +Goal, -Path)
+
+% Breadth-first search implementation.
+
+bfs([[Goal|Path]|_], Goal, [Goal|Path]).
+
+bfs([Path|Paths], Goal, Result) :-
+
+ Path = [Node|_],
+
+ findall([NewNode, Node|Path],
+ 
+ (edge(Node, NewNode), \+ member(NewNode, Path)),
+ NewPaths),
+ append(Paths, NewPaths, NextPaths),
+ bfs(NextPaths, Goal, Result).
+% edge(+Node1, -Node2)
+% The edge/2 predicate defines the graph we are searching.
+% Here, the graph is defined by the edge/2 facts.
+edge(a, b).
+edge(b, c).
+edge(c, d).
+edge(c, e).
+edge(e, f).
+edge(f, g).
+OUTPUT:
+?- breadth_first_search(a, g, Path).
+Path = [a, b, c, e, f, g].
+RESULT:
+Thus the program to implement Breadth first search (BFS) using prolog was executed 
+and the output was verified successfully.
