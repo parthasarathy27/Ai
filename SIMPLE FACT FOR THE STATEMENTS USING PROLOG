@@ -1,0 +1,44 @@
+AIM:
+To write simple fact for the statements using prolog.
+ALGORITHM:
+Step1: In Prolog syntax, we can write −
+Understand logical programming
+syntax and semantics. Design
+programs in PROLOG language.
+Step2: Prolog programs describe relations, defined by means of clauses. Pure
+prolog is restricted to horn clauses. There are two types of clauses:
+facts and rules. A rule is one of the form Head:-Body.
+and is read as “Head is true if Body is true”.
+Step3: A rule's body consists of calls to predicates, which are called the rule's goals.
+a. Ram like s mango.
+b. Seema is a girl.
+c. Bill likes Cindy.
+d. Rose is red.
+e. John owns gold.
+
+PROGRAM:
+clauses
+likes(ram,mango).
+girl(seema).
+red(rose).
+likes(bill, cindy).
+owns(john,gold).
+
+OUTPUT:
+Goal queries
+?- likes(ram,What).
+What=mango
+?- likes(Who,cindy).
+Who=bill
+?- red(What).
+What=rose.
+
+?- owns(Who,What).
+
+Who=john What=gold.
+
+RESULT:
+
+Thus the simple fact for the statements using prolog was created and the output was verified
+
+successfully.
