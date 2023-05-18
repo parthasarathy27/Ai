@@ -1,4 +1,4 @@
-#AIM:
+AIM:
 To write predicates one converts centigrade temperatures to Fahrenheit, the other checks if a temperature is below freezing.
 
 ALGORITHM:
@@ -8,7 +8,7 @@ ALGORITHM:
  Step 4 : Print temperature in fahrenheit is F 
  Step 5 : print the output.
  
-#PROGRAM:
+PROGRAM:
 Production Rules:
 Arithmetic : c_to_f
 f is c * 9 / 5 + 32
