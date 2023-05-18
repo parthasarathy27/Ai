@@ -1,61 +1,32 @@
-AIM:
-
-To write predicates one converts centigrade temperatures to Fahrenheit, 
-
- the other checks if a temperature is below freezing.
- 
+#AIM:
+To write predicates one converts centigrade temperatures to Fahrenheit, the other checks if a temperature is below freezing.
 
 ALGORITHM:
-
  Step 1: Start the program
-
  Step 2 : Read the input of temperature in Celsius (say C)
-
  Step 3 : F=(9*C)/5+32
-
  Step 4 : Print temperature in fahrenheit is F 
-
  Step 5 : print the output.
  
+#PROGRAM:
+Production Rules:
+Arithmetic : c_to_f
+f is c * 9 / 5 + 32
+freezing f < = 32
 
- PROGRAM:
+Rules:
+c_to_f(C,F):-
+F is C * 9 / 5 + 32. 
+freezing(F) :- F =< 32.
 
- Production Rules:
-
- Arithmetic : c_to_f
-
- f is c * 9 / 5 + 32
-
- freezing f < = 32
-
- Rules:
-
- c_to_f(C,F):-
-
- F is C * 9 / 5 + 32. 
-
- freezing(F) :- F =< 32.
-
- 
-
- OUTPUT:
-
-?-
-
-| c_to_f(100,X).
-
+OUTPUT:
+?- c_to_f(100,X).
 X = 212.
-
 ?- freezing(15).
-
 true.
-
 ?- freezing(45).
-
- false.
+false.
  
 RESULT:
-
- Thus the predicates one to converts centigrade temperatures to
-Fahrenheit, the other checks if a temperature is below freezing was created and the 
-output was verified successfully.
+Thus the predicates one to converts centigrade temperatures toFahrenheit, the other checks if a temperature is below freezing was created
+and the output was verified successfully.
