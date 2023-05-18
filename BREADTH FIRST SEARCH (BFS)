@@ -2,15 +2,15 @@ AIM:
 To write a program to solve any program using breadth first search.
 
 ALGORITHM:
-STEP 1: SET STATUS = 1 (ready state) for each node in G
-STEP 2: Enqueue the starting node A and set its STATUS = 2 (waiting state)
-STEP 3: Repeat Steps 4 and 5 until QUEUE is empty
-STEP 4: Dequeue a node N. Process it and set its STATUS = 3 (processed state).
-STEP 5: Enqueue all the neighbours of N that are in the ready state (whose STATUS = 1) 
-and set their STATUS = 2
-(waiting state)
-[END OF LOOP]
-STEP 6: EXIT
+ STEP 1: SET STATUS = 1 (ready state) for each node in G
+ STEP 2: Enqueue the starting node A and set its STATUS = 2 (waiting state)
+ STEP 3: Repeat Steps 4 and 5 until QUEUE is empty
+ STEP 4: Dequeue a node N. Process it and set its STATUS = 3 (processed state).
+ STEP 5: Enqueue all the neighbours of N that are in the ready state (whose STATUS = 1) 
+ and set their STATUS = 2
+ (waiting state)
+ [END OF LOOP]
+ STEP 6: EXIT
 
 PROGRAM:
 % breadth_first_search(+Start, +Goal, -Path)
