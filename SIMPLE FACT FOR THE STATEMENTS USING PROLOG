@@ -33,13 +33,8 @@ What=mango
 Who=bill
 ?- red(What).
 What=rose.
-
 ?- owns(Who,What).
-
 Who=john What=gold.
 
 RESULT:
-
-Thus the simple fact for the statements using prolog was created and the output was verified
-
-successfully.
+Thus the simple fact for the statements using prolog was created and the output was verified successfully.
