@@ -1,11 +1,13 @@
 AIM:
 To write a program to implement travelling salesman problem.
+
 ALGORITHM:
-STEP 1: Define the list of cities to be visited.
-STEP 2: Define the starting city.
-STEP 3: Create a list of all possible routes that can be taken.
-STEP 4: Calculate the length of each route.
-STEP 5: Select the route with the shortest length.
+ STEP 1: Define the list of cities to be visited.
+ STEP 2: Define the starting city.
+ STEP 3: Create a list of all possible routes that can be taken.
+ STEP 4: Calculate the length of each route.
+ STEP 5: Select the route with the shortest length.
+
 PROGRAM:
 /*This is the data set.*/
 edge(a, b, 3).
@@ -59,9 +61,11 @@ best(_,X,X).
 /*Takes the top path and distance off of the holder and recursively calls it.*/
 pick([Cost-Holder|R],X):- pick(R,Bcost-Bholder),best(Cost-Holder,Bcost-Bholder,X),!.
 pick([X],X).
+
 OUTPUT:
 ?- shortest_path(Path).
 Path = 20-[a, h, d, e, b, c, a].
+
 RESULT:
 Thus the program to implement travelling salesman problem using prolog was 
 executed and the output was verified successfully.
