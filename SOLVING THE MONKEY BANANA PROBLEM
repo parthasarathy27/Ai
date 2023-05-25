@@ -1,56 +1,56 @@
 AIM:
-To write a program to solve the monkey banana problem using prolog.
+ To write a program to solve the monkey banana problem using prolog.
 
 ALGORITHM:
-The monkey can perform the following actions:-
-Step1: Walk on the floor.
-Step2: Climb the box.
-Step3: Push the box around(if it is beside the box).
-Step4: Grasp the banana if it is standing on the box directly under the banana.
-Step5: Production Rules:
-canget(banana,monkey).
-canreach(banana,monkey).
-push(banana,monkey).
-strong(monkey).
-under(banana,chair).
+ The monkey can perform the following actions:-
+ Step1: Walk on the floor.
+ Step2: Climb the box.
+ Step3: Push the box around(if it is beside the box).
+ Step4: Grasp the banana if it is standing on the box directly under the banana.
+ Step5: Production Rules:
+ canget(banana,monkey).
+ canreach(banana,monkey).
+ push(banana,monkey).
+ strong(monkey).
+ under(banana,chair).
 
 PROGRAM:
-RULES:
-in(room,banana).
-at(ceiling,banana).
-strong(monkey).
-grasp(monkey).
-climb(monkey,chair).
-push(monkey,chair):-
-strong(monkey).
-under(banana,chair):-
-push(monkey,chair).
-canreach(banana,monkey):-
-at(floor,banana);
-at(ceiling,banana),
-under(banana,chair),
-climb(monkey,chair).
-canget(banana,monkey):-
-canreach(banana,monkey),grasp(monkey).
+ RULES:
+ in(room,banana).
+ at(ceiling,banana).
+ strong(monkey).
+ grasp(monkey).
+ climb(monkey,chair).
+ push(monkey,chair):-
+ strong(monkey).
+ under(banana,chair):-
+ push(monkey,chair).
+ canreach(banana,monkey):-
+ at(floor,banana);
+ at(ceiling,banana),
+ under(banana,chair),
+ climb(monkey,chair).
+ canget(banana,monkey):-
+ canreach(banana,monkey),grasp(monkey).
 
 OUTPUT:
-?-% c:/Users/user/Documents/new4.pl compiled 0.00 sec, 13 clauses
-?- canget(banana,monkey).
-true.
-?- canreach(banana,monkey).
-true.
-?- push(banana,monkey).
-false.
-?- strong(monkey).
-true.
-?- grasp(monkey).
-true.
-?- climb(monkey,chair).
-true.
-?- push(monkey,chair).
-true.
-?- under(banana,chair).
-true.
+ ?-% c:/Users/user/Documents/new4.pl compiled 0.00 sec, 13 clauses
+ ?- canget(banana,monkey).
+ true.
+ ?- canreach(banana,monkey).
+ true.
+ ?- push(banana,monkey).
+ false.
+ ?- strong(monkey).
+ true.
+ ?- grasp(monkey).
+ true.
+ ?- climb(monkey,chair).
+ true.
+ ?- push(monkey,chair).
+ true.
+ ?- under(banana,chair).
+ true.
 
 RESULT:
-Thus the program to solve the monkey banana problem using prolog was executed and the output was verified successfully.
+ Thus the program to solve the monkey banana problem using prolog was executed and the output was verified successfully.
