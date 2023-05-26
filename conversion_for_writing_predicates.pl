@@ -1,4 +1,4 @@
- Production Rules:
+Production Rules:
  Arithmetic : c_to_f
  f is c * 9 / 5 + 32
  freezing f < = 32
