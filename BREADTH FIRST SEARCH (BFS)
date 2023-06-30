@@ -40,5 +40,4 @@ OUTPUT:
  Path = [a, b, c, e, f, g].
 
 RESULT:
- Thus the program to implement Breadth first search (BFS) using prolog was executed 
- and the output was verified successfully.
+ Thus the program to implement Breadth first search (BFS) using prolog was executed and the output was verified successfully.
