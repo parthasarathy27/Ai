@@ -1,5 +1,4 @@
 # Ai_prolog_laboratory
-----------------------
 ![image](https://github.com/parthasarathy27/Ai_prolog_laboratory/assets/83574852/ee758bb1-13f7-44d4-9d3e-8be89551e155)
 
 # *Prolog*
