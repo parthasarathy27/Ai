@@ -11,7 +11,6 @@ Prolog or PROgramming in LOGics is a logical and declarative programming languag
 In Prolog, we need not mention the way how one problem can be solved, we just need to mention what the problem is, so that Prolog automatically solves it. However, in Prolog we are supposed to give clues as the solution method.
 
 # Some Applications of Prolog
------------------------------
 Prolog is used in various domains. It plays a vital role in automation system. 
 
 Following are some other important fields where Prolog is used −
