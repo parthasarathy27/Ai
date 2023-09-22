@@ -30,7 +30,6 @@ Following are some other important fields where Prolog is used −
 -Problem Solving
 
 ## Advantages :
----------------
 1. Easy to build database. Doesn’t need a lot of programming effort.
 2. Pattern matching is easy. Search is recursion based.
 3. It has built in list handling. Makes it easier to play with any algorithm involving lists.
